@@ -19,9 +19,8 @@ AMOUNT_SYMBOL = Fore.LIGHTYELLOW_EX + "💵 Jumlah Kiriman:" + Style.RESET_ALL
 def print_header():
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.YELLOW + "=" * 50)
-    print(Fore.MAGENTA + " " * 10 + "THANKS TO : DYMin!")
-    print(Fore.BLUE + " " * 10 + "https://github.com/0xA90F/unichain.git")
-    print(Fore.GREEN + " " * 10 + "BUY COFFEE FOR ME: 0xA90FFD1de89f4CE2B8F1bd81b5F12D228B100000 ")
+    print(Fore.MAGENTA + " " * 10 + "THANKS")
+    print(Fore.GREEN + " " * 10 + "BUY COFFEE FOR ME: 0x5ddA3d0d29ebC82a0f8baFe4091BCdA2b417C974 ")
     print(Fore.YELLOW + "=" * 50 + "\n")
 
 load_dotenv()
@@ -94,7 +93,7 @@ def countdown(seconds):
 
 while True:
     print_header()
-    random_amount = random.uniform(0.00001, 0.0002)  # Jumlah transaksi acak
+    random_amount = random.uniform(0.0001, 0.0002)  # Jumlah transaksi acak
     gas_price = get_gas_price()
     send_transaction(receiver_address, random_amount, gas_price)
-    countdown(200)
+    countdown(30)
